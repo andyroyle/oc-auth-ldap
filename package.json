@@ -1,0 +1,35 @@
+{
+  "name": "oc-auth-ldap",
+  "version": "1.0.0",
+  "description": "LDAP plugin for OC authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/opentable/oc-auth-ldap.git"
+  },
+  "keywords": [
+    "ocplugin",
+    "ladp"
+  ],
+  "author": "Andy Royle <ajroyle@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyroyle/oc-auth-ldap"
+  },
+  "homepage": "https://github.com/andyroyle/oc-auth-ldap",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-cli": "^0.1.13",
+    "grunt-mocha-test": "^0.10.0",
+    "should": "^3.2.0",
+    "grunt-contrib-jshint": "^0.9.2"
+  },
+  "dependencies": {
+    "activedirectory": "^0.7.0",
+    "basic-auth-connect": "^1.0.0",
+    "express": "^4.13.3"
+  }
+}
