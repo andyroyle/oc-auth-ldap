@@ -1,52 +1,32 @@
-accept-language-parser
+oc-auth-ldap
 ======================
 
-[![Build Status](https://travis-ci.org/opentable/accept-language-parser.png?branch=master)](https://travis-ci.org/opentable/accept-language-parser) [![NPM version](https://badge.fury.io/js/accept-language-parser.png)](http://badge.fury.io/js/accept-language-parser) ![Dependencies](https://david-dm.org/opentable/accept-language-parser.png)
+Plugin for OC to add LDAP authentication for publishing
 
-Parses the accept-language header from an HTTP request and produces an array of language objects sorted by quality.
+[![Build Status](https://travis-ci.org/andyroyle/oc-auth-ldap.png?branch=master)](https://travis-ci.org/andyroyle/oc-auth-ldap) [![NPM version](https://badge.fury.io/js/oc-auth-ldap.png)](http://badge.fury.io/js/oc-auth-ldap) ![Dependencies](https://david-dm.org/andyroyle/oc-auth-ldap.png)
 
-dependencies: none
-
-installation:
+__Usage__
 
 ```
-npm install accept-language-parser
+npm install --save oc-auth-ldap
 ```
 
-usage:
+in your oc-conf:
 
 ```
-var parser = require('accept-language-parser');
-
-var language = parser.parse('en-GB,en;q=0.8');
-
-console.log(language);
-```
-
-Output will be:
-
-```
-[
-  {
-    code: "en",
-    region: "GB",
-    quality: 1.0
-  },
-  {
-    code: "en",
-    region: undefined,
-    quality: 0.8
+{
+  "publishAuth": {
+    "type": "ldap",
+    "url": "ldap://my-dc.domain.com",
+    "baseDN": "DC=domain.com,DC=com"
   }
-];
+}
 ```
 
-Output is always sorted in quality order from highest -> lowest. as per the http spec, omitting the quality value implies 1.0.
-
-__Known issues__
-- Cannot cope with multi-part region codes, i.e. 'az-AZ-Cyrl' will be treated as 'az-AZ'
+Ta-Da!
 
 __Running tests__
 ```
 npm install
-grunt test
+npm test
 ```
