@@ -1,6 +1,6 @@
 {
   "name": "oc-auth-ldap",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "LDAP plugin for OC authentication",
   "main": "index.js",
   "scripts": {
