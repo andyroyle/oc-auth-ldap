@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/opentable/oc-auth-ldap.git"
+    "url": "git://github.com/andyroyle/oc-auth-ldap.git"
   },
   "keywords": [
     "ocplugin",
